@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/cxk292/.cinnamon'
+let g:netrw_dirhist_2='/home/cxk292/.dropbox'
+let g:netrw_dirhist_3='/home/cxk292/.linuxmint'
+let g:netrw_dirhist_4='/home/cxk292/desktop/vagrant'
+let g:netrw_dirhist_5='/home/cxk292/desktop/local'
+let g:netrw_dirhist_6='/home/cxk292/desktop/local/.git'
+let g:netrw_dirhist_7='/home/cxk292/desktop/local/www'
+let g:netrw_dirhist_8='/home/cxk292/desktop/dotfiles/.vim/after/plugin'
