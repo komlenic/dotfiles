@@ -12,7 +12,7 @@ if [[ $a == "Y" || $a == "y" ]]
     # or '.git', create a symlink in the executing user's home dir.
     for file in $filelist
     do
-      if [ "$file" != "$this" -a "$file" != ".git" ]
+      if [ "$file" != "$this" -a "$file" != ".git" -a "$file" != ".gitignore" ]
         then
           echo "Symlinking: $file"
           rm -rf "$HOME/$file"
