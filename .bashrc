@@ -1,7 +1,8 @@
 # .bashrc
 
-# Setup some common commands with desired options 
+# Setup some common commands with desired options
 alias grep='grep --color=auto'
+alias ll='ls -lah'
 
 # Extract nearly any type of archive.  This is great but also remember that the
 # utility 'unp' can also be installed and does the same thing.
