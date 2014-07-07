@@ -27,4 +27,6 @@ extract () {
    fi
 }
 
+# Turn on some spelling autocorrection
+shopt -s cdspell
 
