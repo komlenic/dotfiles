@@ -4,7 +4,7 @@
 this=`basename $0`
 filelist=`ls -A`
 
-echo "This script will rm -rf any already-present files in your home directory.  Continue? (y/n)"
+echo "This script will overwrite existing dotfiles.  Continue? (y/n)"
 read a
 if [[ $a == "Y" || $a == "y" ]]
   then
