@@ -43,9 +43,9 @@ nmap <leader>w :w!<cr>
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
-" Set window size
-set lines=40
-set columns=100
+" Set window size (disabled for now)
+" set lines=40
+" set columns=100
 
 " Set font
 if has("gui_running")
