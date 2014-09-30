@@ -1,11 +1,11 @@
 # .bashrc
 
 # Promt.
-export PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\h\[$(tput setaf 3)\] \w\n\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
+export PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\h\[$(tput setaf 3)\]\[ \]\w\n\[$(tput setaf 7)\]\\$\[ \]\[$(tput sgr0)\]"
 
 # Setup some common commands with desired options
 alias grep='grep --color=auto'
-alias ll='ls -lah'
+alias ll='ls -lah --color=auto'
 
 # Extract nearly any type of archive.  This is great but also remember that the
 # utility 'unp' can also be installed and does the same thing.

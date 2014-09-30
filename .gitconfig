@@ -4,9 +4,10 @@
 [core]
   editor = vim
   autocrlf = input
+  pager = less -R -i --quit-if-one-screen -X -S
 [color]
   ui = true
 [alias]
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   diff = diff --color
   show = show --color
