@@ -383,9 +383,12 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
-" Associate Drupal files as php
+" Associate Drupal files with the correct filetype
 au BufNewFile,BufRead *.install set filetype=php
 au BufNewFile,BufRead *.module set filetype=php
 au BufNewFile,BufRead *.inc set filetype=php
 au BufNewFile,BufRead *.test set filetype=php
+" See https://github.com/nielsonm/Vim-Drupal-7-.info-syn
+au BufNewFile,BufRead *.info set filetype=drupal-info
+au BufNewFile,BufRead *.make set filetype=drupal-info
 
