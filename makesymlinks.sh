@@ -22,6 +22,6 @@ if [[ $a == "Y" || $a == "y" ]]
   # Might as well go ahead and source the new .bashrc.  Note that this will
   # not really take effect in the current shell instance without manually
   # typing 'source .bashrc'.
-  source "$HOME/.bashrc"
+  source ".bashrc"
   fi
 
