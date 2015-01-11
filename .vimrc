@@ -113,8 +113,8 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-"colorscheme rdark
-"set background=dark
+colorscheme desert
+set background=dark
 
 " Set extra options and fonts when running in GUI mode
 if has("gui_running")
