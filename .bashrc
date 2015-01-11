@@ -1,7 +1,9 @@
 # .bashrc
 
 # Promt.
-export PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\h\[$(tput setaf 3)\]\[ \]\w\n\[$(tput setaf 7)\]\\$\[ \]\[$(tput sgr0)\]"
+if [ ! -z "$PS1" ]; then
+  export PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\h\[$(tput setaf 3)\]\[ \]\w\n\[$(tput setaf 7)\]\\$\[ \]\[$(tput sgr0)\]"
+fi
 
 # Setup some common commands with desired options
 alias grep='grep --color=auto'
