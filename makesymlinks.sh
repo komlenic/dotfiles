@@ -10,13 +10,13 @@ if [[ $a == "Y" || $a == "y" ]]
   then
     # For each filename that doesn't match the executing script name
     # or '.git', create a symlink in the executing user's home dir.
+    # This will include directories.
     for file in $filelist
     do
       if [ "$file" != "$this" -a "$file" != ".git" -a "$file" != ".gitignore" ]
         then
-          echo "Symlinking: $file"
           rm -rf "$HOME/$file"
-          ln -s "dotfiles/$file" "$HOME/$file"
+          ln -sv "dotfiles/$file" "$HOME/$file"
         fi
     done
   # Might as well go ahead and source the new .bashrc.  Note that this will
