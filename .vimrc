@@ -409,5 +409,5 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_loc_list_height = 7
-let g:syntastic_php_checkers = ["phpcs"]
+let g:syntastic_php_checkers = ["php", "phpcs"]
 let g:syntastic_php_phpcs_args = " --standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
