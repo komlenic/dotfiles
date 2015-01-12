@@ -116,6 +116,11 @@ syntax enable
 colorscheme desert
 set background=dark
 
+" Set indicator for lines longer than 80
+if exists('+colorcolumn')
+    set colorcolumn=80
+endif
+
 " Set extra options and fonts when running in GUI mode
 if has("gui_running")
     set guioptions-=T
@@ -392,3 +397,17 @@ au BufNewFile,BufRead *.test set filetype=php
 au BufNewFile,BufRead *.info set filetype=drupal-info
 au BufNewFile,BufRead *.make set filetype=drupal-info
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Syntastic
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_loc_list_height = 7
+let g:syntastic_php_checkers = ["phpcs"]
+let g:syntastic_php_phpcs_args = " --standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
