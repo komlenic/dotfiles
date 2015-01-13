@@ -388,6 +388,16 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
+" Toggle colorcolumn on and off with ,cc
+function! g:ToggleColorColumn()
+  if &colorcolumn != ''
+    setlocal colorcolumn&
+  else
+    setlocal colorcolumn=79
+  endif
+endfunction
+nnoremap <silent> <leader>cc :call g:ToggleColorColumn()<CR>
+
 " Associate Drupal files with the correct filetype
 au BufNewFile,BufRead *.install set filetype=php
 au BufNewFile,BufRead *.module set filetype=php
