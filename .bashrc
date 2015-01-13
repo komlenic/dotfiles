@@ -18,8 +18,8 @@ alias grep='grep --color=auto'
 alias ll='ls -lah --color=auto'
 alias lll='ls -lah --color=always | less -R'
 
-# Extract nearly any type of archive.  This is great but also remember that the
-# utility 'unp' can also be installed and does the same thing.
+# Extract nearly any type of archive.  This is okay where needed, but dtrx aka
+# "do the right extraction" tool is superior if available.
 extract () {
   if [ -f $1 ] ; then
     case $1 in
