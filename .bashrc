@@ -16,7 +16,7 @@ fi
 # Setup some common commands with desired options
 alias grep='grep --color=auto'
 alias ll='ls -lah --color=auto'
-alias lll='ll | less'
+alias lll='ls -lah --color=always | less -R'
 
 # Extract nearly any type of archive.  This is great but also remember that the
 # utility 'unp' can also be installed and does the same thing.
