@@ -1,8 +1,7 @@
 # .bashrc
-
 # If git bash completion is present, use it.
-if [ -f ".git-completion.sh" ]; then
-  source .git-completion.sh
+if [ -e "$HOME/.git-completion.sh" ]; then
+  source "$HOME/.git-completion.sh"
   export GIT_PS1_SHOWDIRTYSTATE=1
   export GIT_PS1_SHOWUNTRACKEDFILES=1
   export GIT_PS1_SHOWUPSTREAM="auto verbose"
@@ -10,7 +9,7 @@ fi
 
 # Promt.
 if [ ! -z "$PS1" ]; then
-  export PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\h\[$(tput setaf 3)\]\[ \]\w\[$(tput setaf 1)\]\$(__git_ps1 ' (%s)') \n\[$(tput setaf 7)\]\\$\[ \]\[$(tput sgr0)\]"
+  export PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\h\[$(tput setaf 3)\]\[ \]\w\[$(tput setaf 1)\]\$(__git_ps1 \" (%s)\") \n\[$(tput setaf 7)\]\\$\[ \]\[$(tput sgr0)\]"
 fi
 
 # Setup some common commands with desired options
