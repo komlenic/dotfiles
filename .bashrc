@@ -16,6 +16,7 @@ fi
 alias grep='grep --color=auto'
 alias ll='ls -lah --color=auto'
 alias lll='ls -lah --color=always | less -R'
+alias llg='ls -lah --color=always | grep'
 
 # Extract nearly any type of archive.  This is okay where needed, but dtrx aka
 # "do the right extraction" tool is superior if available.
