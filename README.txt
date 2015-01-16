@@ -36,8 +36,6 @@ OTHER INSTALLATION NOTES:
 
 TODO:
 
-- put this thing on github instead of bitbucket.  It was only on bitbucket
-  so that it could be private, and we don't need that.
 - ensure that the prompt only uses the fancy git stuff if it can
 - consider refactoring makesymlinks.sh to only symlink files starting with a
   '.' that aren't .git or .gitignore

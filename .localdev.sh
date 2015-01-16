@@ -33,7 +33,7 @@ echo "Beginning user-specific provisioning..."
 
 cd /home/vagrant
 if [ ! -d "dotfiles" ]; then
-  git clone git@bitbucket.org:komlenic/dotfiles.git
+  git clone git@github.com:komlenic/dotfiles.git
   cd dotfiles
   echo 'y' | ./makesymlinks.sh
 else
