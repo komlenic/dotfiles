@@ -13,7 +13,7 @@ if [[ $a == "Y" || $a == "y" ]]
     # This will include directories.
     for file in $filelist
     do
-      if [ "$file" != "$this" -a "$file" != ".git" -a "$file" != ".gitignore" -a "$file" != ".localdev.sh"]
+      if [ "$file" != "$this" -a "$file" != ".git" -a "$file" != ".gitignore" -a "$file" != ".localdev.sh" ]
         then
           rm -rf "$HOME/$file"
           ln -sv "dotfiles/$file" "$HOME/$file"
