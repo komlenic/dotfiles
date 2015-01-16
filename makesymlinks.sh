@@ -13,7 +13,7 @@ if [[ $a == "Y" || $a == "y" ]]
     # This will include directories.
     for file in $filelist
     do
-      if [ "$file" != "$this" -a "$file" != ".git" -a "$file" != ".gitignore" ]
+      if [ "$file" != "$this" -a "$file" != ".git" -a "$file" != ".gitignore" -a "$file" != ".localdev.sh"]
         then
           rm -rf "$HOME/$file"
           ln -sv "dotfiles/$file" "$HOME/$file"
@@ -23,5 +23,9 @@ if [[ $a == "Y" || $a == "y" ]]
   # not really take effect in the current shell instance without manually
   # typing 'source .bashrc'.
   source ".bashrc"
+
+  # Copy the .localdev.sh file, since vagrant does not seem to want to follow
+  # symlinks to provisioning scripts.
+  cp -fv .localdev.sh ../
   fi
 
