@@ -44,3 +44,9 @@ extract () {
 # Turn on some spelling autocorrection
 shopt -s cdspell
 
+# Search the googles from the terminal.
+function google() {
+  search="$@"
+  nohup xdg-open "http://www.google.com/search?q=$search" > /dev/null 2>&1 &
+} &> /dev/null
+
