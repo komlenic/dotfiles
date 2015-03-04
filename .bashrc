@@ -50,3 +50,11 @@ function google() {
   nohup xdg-open "http://www.google.com/search?q=$search" > /dev/null 2>&1 &
 } &> /dev/null
 
+# make cursor jump over words
+bind '"\e[5C": forward-word'    # control+arrow_right
+bind '"\e[5D": backward-word'   # control+arrow_left
+
+# make history searchable by entering the beginning of command
+# and using up and down keys
+bind '"\e[A": history-search-backward'  # arrow_up
+bind '"\e[B": history-search-forward'   # arrow_down
