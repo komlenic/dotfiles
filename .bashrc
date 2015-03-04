@@ -58,3 +58,7 @@ bind '"\e[5D": backward-word'   # control+arrow_left
 # and using up and down keys
 bind '"\e[A": history-search-backward'  # arrow_up
 bind '"\e[B": history-search-forward'   # arrow_down
+
+# Use a better 'cd' function with history.
+# See http://www.tldp.org/LDP/LGNET/109/marinov.html
+source ~/dotfiles/acd_func.sh
