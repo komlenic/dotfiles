@@ -18,6 +18,9 @@ alias ll='ls -lah --color=auto'
 alias lll='ls -lah --color=always | less -R'
 alias llg='ls -lah --color=always | grep'
 
+# Alias 'thefuck', see: https://github.com/nvbn/thefuck
+alias fuck='$(thefuck $(fc -ln -1))'
+
 # Extract nearly any type of archive.  This is okay where needed, but dtrx aka
 # "do the right extraction" tool is superior if available.
 extract () {
