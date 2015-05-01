@@ -18,12 +18,12 @@ alias ll='ls -lah --color=auto'
 
 # Long listing + less: easy scrolling through a long directory listing.
 function lll() {
-  ls -lah --color=always "$1" | less -R
+  ls -lah --color=always "${1-`pwd`}" | less -R
 }
 
 # Long listing + grep: easy searching through a long directory listing.
 function llg() {
-  ls -lah --color=always "$1" | grep -i "$2"
+  ls -lah --color=always "${2-`pwd`}" | grep -i "${1}"
 }
 
 # Alias 'thefuck', see: https://github.com/nvbn/thefuck
