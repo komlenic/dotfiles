@@ -12,11 +12,19 @@ if [ ! -z "$PS1" ]; then
   export PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\h\[$(tput setaf 3)\]\[ \]\w\[$(tput setaf 1)\]\$(__git_ps1) \n\[$(tput setaf 7)\]\\$\[ \]\[$(tput sgr0)\]"
 fi
 
-# Setup some common commands with desired options
+# Setup some common commands with desired options.
 alias grep='grep --color=auto'
 alias ll='ls -lah --color=auto'
-alias lll='ls -lah --color=always | less -R'
-alias llg='ls -lah --color=always | grep'
+
+# Long listing + less: easy scrolling through a long directory listing.
+function lll() {
+  ls -lah --color=always "$1" | less -R
+}
+
+# Long listing + grep: easy searching through a long directory listing.
+function llg() {
+  ls -lah --color=always "$1" | grep -i "$2"
+}
 
 # Alias 'thefuck', see: https://github.com/nvbn/thefuck
 alias fuck='$(thefuck $(fc -ln -1))'
@@ -57,8 +65,8 @@ function google() {
 bind '"\e[5C": forward-word'    # control+arrow_right
 bind '"\e[5D": backward-word'   # control+arrow_left
 
-# make history searchable by entering the beginning of command
-# and using up and down keys
+# Make history searchable by entering the beginning of command
+# and using up and down keys.
 bind '"\e[A": history-search-backward'  # arrow_up
 bind '"\e[B": history-search-forward'   # arrow_down
 
