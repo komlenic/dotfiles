@@ -13,3 +13,7 @@
   show = show --color
 [push]
 	default = current
+[init]
+	templatedir = ~/.git_templates
+[branch]
+	autosetuprebase = always
