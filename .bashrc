@@ -62,7 +62,7 @@ function google() {
 } &> /dev/null
 
 # make cursor jump over words
-if [ -t 1]
+if [ -t 1 ]
 then
   bind '"\e[5C": forward-word'    # control+arrow_right
   bind '"\e[5D": backward-word'   # control+arrow_left
@@ -70,7 +70,7 @@ fi
 
 # Make history searchable by entering the beginning of command
 # and using up and down keys.
-if [ -t 1]
+if [ -t 1 ]
 then
   bind '"\e[A": history-search-backward'  # arrow_up
   bind '"\e[B": history-search-forward'   # arrow_down
