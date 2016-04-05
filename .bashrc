@@ -62,13 +62,19 @@ function google() {
 } &> /dev/null
 
 # make cursor jump over words
-bind '"\e[5C": forward-word'    # control+arrow_right
-bind '"\e[5D": backward-word'   # control+arrow_left
+if [ -t 1]
+then
+  bind '"\e[5C": forward-word'    # control+arrow_right
+  bind '"\e[5D": backward-word'   # control+arrow_left
+fi
 
 # Make history searchable by entering the beginning of command
 # and using up and down keys.
-bind '"\e[A": history-search-backward'  # arrow_up
-bind '"\e[B": history-search-forward'   # arrow_down
+if [ -t 1]
+then
+  bind '"\e[A": history-search-backward'  # arrow_up
+  bind '"\e[B": history-search-forward'   # arrow_down
+fi
 
 # Use a better 'cd' function with history.
 # See http://www.tldp.org/LDP/LGNET/109/marinov.html
