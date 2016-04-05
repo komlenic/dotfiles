@@ -79,3 +79,9 @@ fi
 # Use a better 'cd' function with history.
 # See http://www.tldp.org/LDP/LGNET/109/marinov.html
 source ~/dotfiles/acd_func.sh
+
+# Load screenfetch.
+if [ "$HOSTNAME" = "E7250-LM17" ]
+then
+  ~/screenFetch/screenfetch-dev
+fi
