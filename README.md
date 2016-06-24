@@ -19,6 +19,9 @@ cd ~/dotfiles
 stow bash
 ```
 
+I got the idea to use this method from Brandon Invergo, here:
+http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html
+
 ## Notes
 
 * Vim plugins that I use are all installed using Pathogen
