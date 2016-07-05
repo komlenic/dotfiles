@@ -80,7 +80,7 @@ fi
 # See http://www.tldp.org/LDP/LGNET/109/marinov.html
 if [ -t 1 ]
 then
-  source ~/dotfiles/acd_func.sh
+  source ~/dotfiles/bash/acd_func.sh
 fi
 
 # Load screenfetch.
