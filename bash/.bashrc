@@ -83,8 +83,13 @@ then
   source ~/dotfiles/bash/acd_func.sh
 fi
 
-# Load screenfetch.
-if [ "$HOSTNAME" = "E7250-LM17" ]
+# Load or install screenfetch.
+if [[ -x ~/screenfetch/screenfetch-dev ]]
 then
-  ~/screenFetch/screenfetch-dev
+  ~/screenfetch/screenfetch-dev
+else
+  wget -P ~/screenfetch/ https://raw.githubusercontent.com/KittyKatt/screenFetch/master/screenfetch-dev
+  chmod +x ~/screenfetch/screenfetch-dev
+  ~/screenfetch/screenfetch-dev
 fi
+
