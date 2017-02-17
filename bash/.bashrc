@@ -84,12 +84,14 @@ then
 fi
 
 # Load or install screenfetch.
-if [[ -x ~/screenfetch/screenfetch-dev ]]
+if [ -t 1 ]
 then
-  ~/screenfetch/screenfetch-dev
-else
-  wget -P ~/screenfetch/ https://raw.githubusercontent.com/KittyKatt/screenFetch/master/screenfetch-dev
-  chmod +x ~/screenfetch/screenfetch-dev
-  ~/screenfetch/screenfetch-dev
+  if [ -x ~/screenfetch/screenfetch-dev ]
+  then
+    ~/screenfetch/screenfetch-dev -t
+  else
+    wget -P ~/screenfetch/ https://raw.githubusercontent.com/KittyKatt/screenFetch/master/screenfetch-dev
+    chmod +x ~/screenfetch/screenfetch-dev
+    ~/screenfetch/screenfetch-dev -t
+  fi
 fi
-
