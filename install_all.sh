@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Abort if stow is not installed.
+command -v stow >/dev/null 2>&1 || { echo "This script requires 'stow' but it is not installed.  Aborting." >&2; exit 1; }
+
 # Store the filename of the executing script.
 this=`basename $0`
 dirlist=`ls -d */`
