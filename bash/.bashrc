@@ -9,7 +9,7 @@ fi
 
 # Promt.
 if [ ! -z "$PS1" ]; then
-  export PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@\h\[$(tput setaf 3)\]\[ \]\w\[$(tput setaf 1)\]\$(__git_ps1) \n\[$(tput setaf 7)\]\\$\[ \]\[$(tput sgr0)\]"
+  export PS1="\[$(tput bold)\]\[$(tput setaf 2)\][\A] \u@\h\[$(tput setaf 3)\]\[ \]\w\[$(tput setaf 1)\]\$(__git_ps1) \n\[$(tput setaf 7)\]\\$\[ \]\[$(tput sgr0)\]"
 fi
 
 # Setup some common commands with desired options.
