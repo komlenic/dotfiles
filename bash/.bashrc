@@ -31,9 +31,6 @@ function llg() {
   ls -lah --color=always "${2-`pwd`}" | grep -i "${1}"
 }
 
-# Alias 'thefuck', see: https://github.com/nvbn/thefuck
-alias fuck='$(thefuck $(fc -ln -1))'
-
 # Extract nearly any type of archive.  This is okay where needed, but dtrx aka
 # "do the right extraction" tool is superior if available.
 extract () {
@@ -59,12 +56,6 @@ extract () {
 
 # Turn on some spelling autocorrection
 shopt -s cdspell
-
-# Search the googles from the terminal.
-function google() {
-  search="$@"
-  nohup xdg-open "http://www.google.com/search?q=$search" > /dev/null 2>&1 &
-} &> /dev/null
 
 # make cursor jump over words
 if [ -t 1 ]
