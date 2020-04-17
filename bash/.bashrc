@@ -1,4 +1,9 @@
 # .bashrc
+
+# Keep a large command history
+HISTSIZE=1000000
+HISTFILESIZE=2000000
+
 # If git bash completion is present, use it.
 if [ -e "$HOME/.git-completion.sh" ]; then
   source "$HOME/.git-completion.sh"
