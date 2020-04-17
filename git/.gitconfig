@@ -17,3 +17,5 @@
 	templatedir = ~/.git_templates
 [branch]
 	autosetuprebase = always
+[help]
+	autocorrect = 30
