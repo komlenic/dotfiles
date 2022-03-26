@@ -8,8 +8,10 @@ Like everyone's dotfiles, mostly this repository is just for me to easily
 clone and use.  It also enables me to pass along a link to someone else and
 share something I use, and you might find something interesting here also.
 
-## Installation
+## Requirements
+Git and GNU Stow
 
+## Installation
 Run './install_all.sh'.  This basically just runs 'stow' for all directories
 in this repo. If you only need/want to use a particular set of dotfiles, say,
 just the bash stuff, simply run:
@@ -23,6 +25,11 @@ I got the idea to use this method from Brandon Invergo, here:
 http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html
 
 ## Notes
+
+* If you encounter "existing target is neither a link nor a directory" errors
+  this usually means that the filename specified in the error already exists.
+  Delete the offending file and re-run ./install_all.sh. One common example of
+  this is the default .bashrc that many distros create.
 
 * Vim plugins that I use are all installed using Pathogen
   https://github.com/tpope/vim-pathogen
